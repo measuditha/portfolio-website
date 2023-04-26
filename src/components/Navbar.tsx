@@ -14,11 +14,8 @@ export default function Navbar() {
   return (
     <>
       <div className="flex w-full items-center justify-between p-6 bg-white-700 h-20">
-        <span className="text-4xl font-bold"> UDITHA </span>
-        <span onClick={handleToggleNav} className='text-2xl flex md:hidden'>
-          <ImMenu />
-        </span>
-        <div className='hidden md:flex items-center justify-end space-x-4 '>
+        <span className="text-4xl font-bold text-slate-800"> UDITHA </span>
+        <div className='hidden md:flex items-center justify-end space-x-4 text-slate-700'>
           <ul className='flex items-center justify-end space-x-6 font-bold'>
             <li className='relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2.5px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-orange-500 hover:before:w-full hover:before:opacity-100'>
               <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : "")}>HOME</NavLink>
@@ -47,16 +44,19 @@ export default function Navbar() {
             <NavLink to='*' />
           </ul>
         </div>
-        <div className='flex items-center justify-end space-x-4 p-10'>
-          <span className='text-xl hover:scale-125 transition duration-300'>
+        <div className='flex items-center justify-end space-x-4 p-10 text-slate-700'>
+          <span className='text-2xl hover:scale-125 transition duration-300 hover:text-blue-900'>
             <BsLinkedin />
           </span>
-          <span className='text-xl hover:scale-125 transition duration-300'>
+          <span className='text-2xl hover:scale-125 transition duration-300 hover:text-black'>
             <BsGithub />
+          </span>
+          <span onClick={handleToggleNav} className='text-2xl flex md:hidden text-slate-700 hover:scale-125 transition duration-300'>
+            <ImMenu />
           </span>
         </div>
       </div>
-      {toggleNav ? (<div className='bg-orange-50 shadow-md p-4 md:hidden'>
+      {toggleNav ? (<div className='bg-orange-50 shadow-md p-4 md:hidden text-slate-700'>
         <ul className='flex flex-col items-start justify-center gap-4 font-bold'>
           <li className='relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2.5px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-orange-500 hover:before:w-full hover:before:opacity-100'>
             <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : "")}>HOME</NavLink>
